@@ -25,7 +25,18 @@ class Deck
     card.shuffle!
   end
 
-  
+  def deal
+    card.pop(5)
+  end
+
+end
+
+class Player
+  attr_reader :card
+
+  def initialize(cards)
+    @card = cards
+  end
 
 end
 
@@ -40,7 +51,6 @@ end
 #puts cards
 
 deck = Deck.new(cards)
-puts deck.shuffle
-
-
+#puts deck.shuffle
+Puts deck.deal
 
